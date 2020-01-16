@@ -2,11 +2,11 @@
     {
         "nom": "SCEP",
         "description": "Société cairotte d'élevage de poulets SIMULATOR",
-        "prix": 1,
-        "Categorie": "Simulation",
-        "Auteur": {
-            "nom": "Hubert",
-            "prenom": "Bonisseur de La Bath"
+        "prix": 29,
+        "categorie": "Simulation",
+        "auteur": {
+            "nom": "Bonisseur de La Bath",
+            "prenom": "Hubert"
         },
         "avis": [
             {
@@ -28,9 +28,9 @@
     {
         "nom": "Petanque Championship 2040",
         "description": "Defiez vos amis dans ce jeu de sport extreme",
-        "prix": 1,
-        "Categorie": "Sport",
-        "Auteur": {
+        "prix": 14,
+        "categorie": "Sport",
+        "auteur": {
             "nom": "Gilbert",
             "prenom": "Ventregras"
         },
@@ -54,9 +54,9 @@
     {
         "nom": "La ligue des légendes",
         "description": "Pour des legendes, par des legendes, pour devenir une legende et surtout pour l'argent",
-        "prix": 1,
-        "Categorie": "MOBA",
-        "Auteur": {
+        "prix": 21,
+        "categorie": "MOBA",
+        "auteur": {
             "nom": "Rito Gamesse"
         },
         "avis": [
@@ -86,32 +86,64 @@
     {
         "nom": "Doto3",
         "description": "C'est la ligue des legendes, mais sans budget",
-        "prix": 1,
-        "Categorie": "MOBA",
-        "Auteur": {
+        "prix": 7,
+        "categorie": "MOBA",
+        "auteur": {
             "nom": "GrenouilleDeGlace"
         },
         "avis": [
             {
                 "user": {
-                    "pseudo": "xXTitouanXx"
+                    "pseudo": "g@meur21"
                 },
                 "note": 10,
-                "commentaire": "c'est moi le plus mieu a ce jeu"
+                "commentaire": "il est bien"
             },
             {
                 "user": {
-                    "pseudo": "Ymbac"
+                    "pseudo": "lolo52"
                 },
-                "note": 7,
-                "commentaire": "J'aime l'histoire"
+                "note": 4,
+                "commentaire": "les graphismes sont pas top"
             },
             {
                 "user": {
-                    "pseudo": "LMAV"
+                    "pseudo": "bboy"
                 },
-                "note": 2,
-                "commentaire": "Les personnages sont moches"
+                "note": 8,
+                "commentaire": "j'aime"
+            }
+        ]
+    },
+    {
+        "nom": "TFT",
+        "description": "C'est la ligue des legendes, mais avec des cartes",
+        "prix": 7,
+        "categorie": "Jeu de plateau",
+        "auteur": {
+            "nom": "Rito Gamesse"
+        },
+        "avis": [
+            {
+                "user": {
+                    "pseudo": "tabernak38"
+                },
+                "note": 6,
+                "commentaire": "pas mal de cartes à apprendre..."
+            },
+            {
+                "user": {
+                    "pseudo": "lolo52"
+                },
+                "note": 8,
+                "commentaire": "je prefere le jeu de cartes au jeu de base"
+            },
+            {
+                "user": {
+                    "pseudo": "hater001"
+                },
+                "note": 0,
+                "commentaire": "nul"
             }
         ]
     }
