@@ -7,7 +7,7 @@ db.jeux.find();
 db.jeux.find({ "nom": "Petanque Championship 2040" },
     { "Categorie": 1 });
 
-//3: Affiche les noms les jeux dont le rpix est inferieur ou égal à 15
+//3: Affiche les noms les jeux dont le prix est inferieur ou égal à 15
 db.jeux.find({ "prix": { $lte: 15 } },
     { "nom": 1 });
 
@@ -108,3 +108,15 @@ var reduce = function (val) {
 }
 
 db.jeux.mapReduce(map, reduce, { out: { inline: 1 } });
+
+//13: Affiche les trois jeux les mieux/plus notés (utiliser la moyenne serait plus significatif)
+db.jeux.aggregate([
+    { $unwind: "$avis" },
+    {
+        $group: {
+            "_id": "$avis",
+            "total": { $sum: "$note" }
+        }
+    },
+    { $sort: { "total": 1 } }
+]);
