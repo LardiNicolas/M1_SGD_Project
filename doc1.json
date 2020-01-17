@@ -1,4 +1,4 @@
-[
+db.jeux.insertMany([
     {
         "nom": "SCEP",
         "description": "Société cairotte d'élevage de poulets SIMULATOR",
@@ -118,7 +118,7 @@
     {
         "nom": "TFT",
         "description": "C'est la ligue des legendes, mais avec des cartes",
-        "prix": 7,
+        "prix": 9,
         "categorie": "Jeu de plateau",
         "auteur": {
             "nom": "Rito Gamesse"
@@ -147,4 +147,4 @@
             }
         ]
     }
-]
+])
