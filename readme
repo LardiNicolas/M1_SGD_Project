@@ -3,5 +3,10 @@ La base de données sera constituée de documents orientés "Jeu"
 Chaque jeu possède un nom, une description, un prix et une catégorie.
 Il possède également 0 ou plusieurs avis postés par des uilisateurs.
 Chaque jeu est publié par un auteur.
-Les utilisateurs et les auteurs sont des Personnes: ils ont un nom et prénom.
-Les utilisateurs ont un Pseudo
+Les auteurs ont un nom et prénom.
+Les utilisateurs ont un Pseudo.
+
+On a choisi de centrer le document sur les jeux mais on aurait également pu les centrer
+sur les catégories, ce qui aurait pu être bénéfique pour l'affichage des jeux sur le site.
+Cependant cela complexifierait les requêtes portant sur toute la collection, c'est pour cela que 
+nous avons choisi de rester centré 'jeu'.
