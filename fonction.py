@@ -22,16 +22,15 @@ def informationUser(pseudo):
     c = db.jeux.aggregate([{"$unwind" : "$avis"},{"$match" : {"avis.user.pseudo" : pseudo}},
                             {"$group" : {"_id" : "$avis"}}])
     commentaire = False
-
     for doc in c:
         #Pour chacun des avis, on affiche les informations.
         print("\t" + "Note : " + str(doc["_id"]["note"]))
-        print("\t\t" + str(doc["_id"]["commentaire"])+"\n")
+        print("\t\t" + str(doc["_id"]["commentaire"]))
+        print("")
         commentaire = True
     if not commentaire :
         #Si aucun commentaire
-        print("L'utilisateur " + pseudo + " n'a jamais laisse de commentaire ou n'existe pas.")
-
+        print("L'utilisateur " + pseudo + " n'a jamais laisse de commentaire.")
 
 #Fait varier tous les prix en fonction d'un pourcentage donné pour simuler des soldes
 def VariationPrixGlobal(pourcentage):
@@ -48,8 +47,17 @@ def SuppressionDescription():
     db.jeux.update_many({"description" : {"$exists" : True}},{"$unset" : {"description" : ""}})
     print("Descriptions effacees")
 
+#Affichage de la note moyenne, maximum et minimum de chaque catégorie.
+def MoyMinMax():
+    c = db.jeux.aggregate([{$group:[_id: "$categorie", moyenne : {$avg: "$avis.note"}, minimal : {$min : "$avis.note"}, maximal : {$max : "$avis.note"}]}])
+    for doc in c:
+        print("La note moyenne de la categorie" + doc["categorie"] + " est de " + str(doc["_id"][moyenne]))
+        print("La note minimal de la categorie" + doc["categorie"] + " est de " + str(doc["_id"][minimal]))
+        print("La note maximal de la categorie" + doc["categorie"] + " est de " + str(doc["_id"][maximal]))
+
+
 
 #jeuxCategorie()
-informationUser(input("Entrez le nom d'un utilisateur pour avoir ses commentaires: \n"))
+informationUser("LMAV")
 #VariationPrixGlobal(90)
 #SuppressionDescription()
