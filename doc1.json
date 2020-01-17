@@ -1,7 +1,7 @@
 db.jeux.insertMany([
     {
         "nom": "SCEP",
-        "description": "Société cairotte d'élevage de poulets SIMULATOR",
+        "description": "Societe cairotte d'elevage de poulets SIMULATOR",
         "prix": 29,
         "categorie": "Simulation",
         "auteur": {
@@ -14,7 +14,7 @@ db.jeux.insertMany([
                     "pseudo": "DarkCoco"
                 },
                 "note": 7,
-                "commentaire": "Hubert est un bon développeur"
+                "commentaire": "Hubert est un bon developpeur"
             },
             {
                 "user": {
@@ -52,7 +52,7 @@ db.jeux.insertMany([
         ]
     },
     {
-        "nom": "La ligue des légendes",
+        "nom": "La ligue des legendes",
         "description": "Pour des legendes, par des legendes, pour devenir une legende et surtout pour l'argent",
         "prix": 21,
         "categorie": "MOBA",
