@@ -56,6 +56,22 @@ def MoyMinMax():
         print("La note maximal de la categorie" + doc["categorie"] + " est de " + str(doc["_id"][maximal]))
 
 
+#Affiche la moyenne des notes des user qui ont commenté dans au moins 2 catégories différentes
+def moyUser2Comment():
+    c = db.jeux.aggregate({$unwind: {"categorie"}, $group: [_id:"$pseudo", sum:{$sum: {"$avis.commentaire" : 2}}]})
+    for doc in c:
+        count = 0
+        note = 0
+        for i in doc["pseudo"]
+            count=count+1
+            note = note + doc["note"]
+            for j in doc["pseudo"]
+                avg = note/count
+                print("user : " + str(doc["_id"]) + " note moyenne :" + avg)
+
+#La fonction est pas top mais en voiture j'ai du mal à réflechir, sorry
+
+
 
 #jeuxCategorie()
 informationUser("LMAV")
